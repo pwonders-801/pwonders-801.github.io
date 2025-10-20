@@ -12,6 +12,101 @@
                 color: #f2f2f2; 
                 line-height: 1.6; 
             }
+            header, footer {
+                background-color: #2a2f5b;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            header h1 {
+                margin: 0.5rem 0;
+                font-size: 2em;
+                letter-spacing: 2px;
+                color: #ffcc00;
+            }
+
+            nav a {
+                color: #ffcc00;
+                text-decoration: none;
+                margin: 0 0.8rem;
+                font-weight: bold;
+            }
+
+            nav a:hover, nav a:focus {
+                color: #00ffff;
+                text-decoration: underline;
+            }
+
+            main {
+                padding: 2rem;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            section {
+                display: none;
+                animation: fadeIn 0.6s ease;
+            }
+
+            section.active {
+                display: block;
+            }
+
+            h2 {
+                color: #00ffff;
+                border-bottom: 2px solid #00ffff;
+                padding-bottom: 0.3rem;
+            }
+
+            figure {
+                text-align: center;
+                margin: 1.5rem 0;
+            }
+
+            figure img {
+                width: 70%;
+                max-width: 500px;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.4);
+            }
+
+            figcaption {
+                font-style: italic;
+                margin-top: 0.5rem;
+                color: #ccc;
+            }
+
+            footer {
+                font-size: 0.9em;
+                color: #ccc;
+            }
+
+            footer a {
+                color: #ffcc00;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                color: #00ffff;
+            }
+
+            .divider {
+                color: #ffcc00;
+                margin: 0 0.5rem;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            @media (max-width: 600px) {
+                nav a {
+                    display: block;
+                    margin: 0.5rem 0;
+                }
+            }
         </style>
     </head>
     <body>
