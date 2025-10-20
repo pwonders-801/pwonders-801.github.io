@@ -95,5 +95,29 @@
                     <p>All content was written by me and all images were found by me through the Creative Commons search portal.</p>
             </section>
         </main>
+        <footer>
+            <p>
+                <a href="https://validator.w3.org/">HTML Validator</a> | <a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a> | <a href="https://wave.webaim.org/">Accessibility Checker</a>
+            </p>
+        </footer>
+        <script>
+            const links = document.querySelectorAll("nav a");
+            const sections = document.querySelectorAll("section");
+
+            function showSection(id) {
+                sections.forEach(sec => sec.classList.remove("active"));
+                document.getElementById(id).classList.add("active");
+            }
+
+            links.forEach(link => {
+                link.addEventListener("click", e => {
+                    e.preventDefault();
+                    const id = link.getAttribute("href").substring(1);
+                    showSection(id);
+                });
+            });
+
+            showSection("what");
+        </script>
     </body>
 </html>
